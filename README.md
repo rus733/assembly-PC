@@ -1,1 +1,1 @@
-# assembly-PC
+# assembly-PC is trainee project
