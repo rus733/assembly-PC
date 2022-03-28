@@ -26,22 +26,11 @@ a {
   color: inherit;
 }
 
-input {
-  outline: none; /* чтоб не было обводки при нажатии*/
-  border: none;
-  cursor: pointer;
-}
-
+input,
 button {
   outline: none; /* чтоб не было обводки при нажатии*/
   border: none;
   cursor: pointer;
-  border-radius: 5rem;
-  padding: 1rem 3rem;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 150%;
 }
 
 h1,
@@ -58,6 +47,19 @@ h6 {
   margin: 0 auto;
 }
 
+/* введем переменные  */
+/* обращение ко всему документу и получение переменных */
+:root {
+  --text-size-medium: 1.6rem; /*  переменная размер текста  */
+}
+.button {
+  border-radius: 5rem;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: var(--text-size-medium);
+  line-height: 150%;
+}
 .header {
   position: absolute; /*  поднять над бэкгроундом  */
   top: 0; /*сдвинули вверх*/
@@ -86,7 +88,7 @@ h6 {
   margin-right: 7.1rem;
 }
 .header__nav a {
-  font-size: 1.6rem;
+  font-size: var(--text-size-medium);
   line-height: 150%;
 }
 
@@ -161,7 +163,7 @@ h6 {
 }
 .timer__text {
   opacity: 0.4;
-  font-size: 1.6rem;
+  font-size: var(--text-size-medium);
   line-height: 140%;
 }
 
@@ -193,7 +195,7 @@ h6 {
 }
 
 .work__description {
-  font-size: 1.6rem;
+  font-size: var(--text-size-medium);
   line-height: 160%;
 }
 /*===================== Process ================*/
@@ -202,6 +204,9 @@ h6 {
   padding-bottom: 20rem;
 }
 
+.process .process__img {
+  transform: rotate(45deg);
+}
 .process__img {
   width: 9rem;
   height: 6.6rem;
@@ -209,6 +214,7 @@ h6 {
 }
 .process__header {
   margin-bottom: 4.9rem;
+  padding-top: 2rem;
   font-weight: 700;
   font-size: 4.8rem;
   line-height: 140%;
@@ -222,7 +228,7 @@ h6 {
   width: 41rem;
   margin-bottom: 8rem;
   opacity: 0.5;
-  font-size: 1.6rem;
+  font-size: var(--text-size-medium);
   line-height: 160%;
 }
 .process__columns {
@@ -234,7 +240,7 @@ h6 {
   width: 130rem;
   height: 0.2rem;
   position: absolute;
-  top: 31rem;
+  top: 32.5rem;
   left: 50%;
   transform: translate(-50%, 0);
   background: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
@@ -257,4 +263,106 @@ h6 {
   font-size: 1.4rem;
   line-height: 160%;
   opacity: 0.5;
+}
+/*===================== command ================*/
+.command {
+  padding-bottom: 20rem;
+}
+.command__title {
+  margin-bottom: 11.3rem;
+}
+.command__header {
+  margin-bottom: 0;
+}
+.command__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+
+.command__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.command__img {
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50%;
+  margin-bottom: 4rem;
+}
+.command__name {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 140%;
+}
+.command__professional {
+  margin-bottom: 3rem;
+  font-size: var(--text-size-medium);
+  line-height: 160%;
+  opacity: 0.8;
+}
+
+.command__link {
+  font-size: var(--text-size-medium);
+  line-height: 150%;
+  opacity: 0.8;
+  border: 0.1rem solid #ffffff;
+}
+/*========================= assembly =====================*/
+.assembly {
+  padding-bottom: 24.4rem;
+}
+
+.assembly__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.assembly__header {
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 140%;
+}
+
+.assembly__descr {
+  margin-bottom: 4.5rem;
+  font-size: var(--text-size-medium);
+  line-height: 160%;
+  opacity: 0.5;
+}
+.assembly__button {
+  margin-bottom: 4rem;
+  background: linear-gradient(94.78deg, #df5950 11.19%, #451046 93.72%);
+}
+.assembly__socials {
+  display: flex;
+}
+
+/* если бы не экспортировал иконки в виде круглых обьектов  , а только svg значки сетей */
+/* .assembly__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+} */
+
+/* если бы не экспортировал иконки в виде круглых обьектов  , а только svg значки сетей */
+/* .assembly__item img {
+  width: 50%;
+  height: 50%;
+  
+} */
+
+.assembly__item:not(:last-child) {
+  margin-right: 3rem;
 }
