@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="fonts/stylesheet.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 
     <title>Assembly-pc</title>
   </head>
@@ -23,11 +23,11 @@
       </a>
       <!-- <div class="header__menu"> -->
       <nav class="header__nav">
-        <a href="#">Чем занимаемся</a>
-        <a href="#">Процесс работы</a>
-        <a href="#">Команда</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">WORK PROCESS</a>
+        <a href="#">OUR TEAM</a>
       </nav>
-      <button type="button" class="button header__button">Оставить заявку</button>
+      <button type="button" class="button header__button modal__button">Contact with us</button>
       <!-- </div> -->
       <!-- </div> -->
     </header>
@@ -35,27 +35,27 @@
     <main class="main">
       <section class="main-display">
         <div class="container">
-          <h1 class="main-display__header">Собираем игровой ПК под ваш бюджет</h1>
+          <h1 class="main-display__header">Making best PC for your purposes</h1>
           <div class="timer main-display__timer">
             <div class="timer__item">
-              <div class="timer__count">18</div>
-              <div class="timer__text">Дней</div>
+              <div class="timer__count days">18</div>
+              <div class="timer__text">Days</div>
             </div>
             <div class="timer__item">
-              <div class="timer__count">18</div>
-              <div class="timer__text">часов</div>
+              <div class="timer__count hours">18</div>
+              <div class="timer__text">Hours</div>
             </div>
             <div class="timer__item">
-              <div class="timer__count">18</div>
-              <div class="timer__text">минут</div>
+              <div class="timer__count minutes">18</div>
+              <div class="timer__text">Minutes</div>
             </div>
             <div class="timer__item">
-              <div class="timer__count">18</div>
-              <div class="timer__text">секунд</div>
+              <div class="timer__count seconds">18</div>
+              <div class="timer__text">Seconds</div>
             </div>
           </div>
 
-          <button type="button" class="button main-display__button">Оставить заявку</button>
+          <button type="button" class="button main-display__button modal__button">Contact with us</button>
         </div>
         <div class="main-display__background">
           <img src="img/main-screen__bgc.png" alt="" />
@@ -70,11 +70,10 @@
             <img src="img/work__img.png" alt="" />
           </div>
           <div class="work__text">
-            <h2 class="work__header">Чем мы занимаемся</h2>
+            <h2 class="work__header">What are we doing</h2>
             <p class="work__description">
-              Помогаем сэкономить до 40% стоимости игрового компьютера без потери производительности. Подбираем мощные детали компьютера, заказываем у своих
-              поставщиков или напрямую у производителей, чтобы сэкономить ваши деньги. Собираем мощный компьютер, на котором можно играть в любые современные
-              игры и заниматься работой.
+              We help you save up to 40% of the cost of a gaming computer without losing performance. We select powerful computer parts, order from our
+              suppliers or directly from manufacturers to save you money. We assemble a powerful computer on which you can play any modern games and do work.
             </p>
           </div>
         </div>
@@ -88,30 +87,30 @@
             <div class="process__img">
               <img src="img/command-img.svg" alt="" />
             </div>
-            <h2 class="process__header">Процесс работы</h2>
+            <h2 class="process__header">Work process</h2>
           </div>
-          <div class="process__descr">Подробно рассказываем о том, как происходит сборка, от заявки до выдачи вашего заказа</div>
+          <div class="process__descr">We talk in detail about how the assembly takes place, from the application to the issuance of your order</div>
           <div class="process__columns">
             <div class="process__item">
-              <h3 class="process__work">Заявка</h3>
-              <p class="process__text">Мы получаем вашу заявку, связываемся с вами для уточнения деталей, чтобы понять ваши ожидания от будущего компьютера.</p>
-            </div>
-            <div class="process__item">
-              <h3 class="process__work">Подбор</h3>
+              <h3 class="process__work">Order</h3>
               <p class="process__text">
-                После оплаты подбираем комплектующие, которые дадут максимальную производительность. Заказываем их напрямую у поставщиков.
+                We receive your application, contact you to clarify the details in order to understand your expectations from the future computer.
               </p>
             </div>
             <div class="process__item">
-              <h3 class="process__work">Сборка</h3>
+              <h3 class="process__work">Selection</h3>
+              <p class="process__text">After payment, we select components that will give maximum performance. We order directly from suppliers.</p>
+            </div>
+            <div class="process__item">
+              <h3 class="process__work">Assembly</h3>
               <p class="process__text">
-                Собираем компьютер, проводим стартовую диагностику, устанавливаем операционную систему и необходимые драйверы для работы.
+                We assemble the computer, carry out initial diagnostics, install the operating system and the necessary drivers for work.
               </p>
             </div>
             <div class="process__item">
-              <h3 class="process__work">Выдача</h3>
+              <h3 class="process__work">Delivery</h3>
               <p class="process__text">
-                Отдаём компьютер вам в назначенный срок, проводим вместе тестирование, подписываем документы о выполнении работы и гарантии.
+                We return the computer to you at the appointed time, conduct testing together, sign documents on the performance of work and guarantees.
               </p>
             </div>
           </div>
@@ -127,26 +126,26 @@
           <div class="process__img">
             <img src="img/command-img.svg" alt="" />
           </div>
-          <h2 class="process__header command__header">Наша команда</h2>
+          <h2 class="process__header command__header">Our Team</h2>
         </div>
         <div class="command__wrap">
           <div class="command__item">
             <div class="command__img"><img src="img/comm-1.png" alt="" /></div>
-            <h3 class="command__name">Евгений Петров</h3>
-            <div class="command__professional">Специалист по видеокартам</div>
-            <a href="#" class="button command__link">Биография</a>
+            <h3 class="command__name">Eugene</h3>
+            <div class="command__professional">Memory Card Specialist</div>
+            <a href="#" class="button command__link">Info</a>
           </div>
           <div class="command__item">
             <div class="command__img"><img src="img/comm-2.png" alt="" /></div>
-            <h3 class="command__name">Алексей Козлов</h3>
-            <div class="command__professional">Специалист по видеокартам</div>
-            <a href="#" class="button command__link">Биография</a>
+            <h3 class="command__name">Alex</h3>
+            <div class="command__professional">Processor Specialist</div>
+            <a href="#" class="button command__link">Info</a>
           </div>
           <div class="command__item">
             <div class="command__img"><img src="img/comm-3.png" alt="" /></div>
-            <h3 class="command__name">Дмитрий Иванов</h3>
-            <div class="command__professional">Специалист по видеокартам</div>
-            <a href="#" class="button command__link">Биография</a>
+            <h3 class="command__name">Dmitro</h3>
+            <div class="command__professional">Video Card Specialist</div>
+            <a href="#" class="button command__link">Info</a>
           </div>
         </div>
         <!-- /command__wrap -->
@@ -156,9 +155,9 @@
     <section class="assembly">
       <div class="container">
         <div class="assembly__wrap">
-          <h2 class="assembly__header">Закажите свою уникальную сборку</h2>
-          <div class="assembly__descr">Мы свяжемся с вами, чтобы уточнить детали заказа</div>
-          <button type="button" class="button main-display__button assembly__button">Оставить заявку</button>
+          <h2 class="assembly__header">ORDER YOUR UNIQUE PC</h2>
+          <div class="assembly__descr">We will contact you to clarify the details of the order</div>
+          <button type="button" class="button assembly__button modal__button">Contact with us</button>
           <div class="assembly__socials">
             <div class="assembly__item">
               <img src="img/1-vk.svg" alt="" />
@@ -178,5 +177,29 @@
       </div>
       <!-- /container -->
     </section>
+    <!-- /assembly -->
+    <!-- /*===================== modal ================*/ -->
+    <form action="#" class="modal block__center">
+      <div class="modal__inner">
+        <div class="modal__close">
+          <img src="img/cross.svg" alt="" />
+        </div>
+        <h3 class="modal__header">PC Assembly Order</h3>
+        <div class="modal__subheader">We will contact you to discuss order details</div>
+        <div class="modal__elements block__center">
+          <div class="modal__item">
+            <input class="modal__input" type="text" name="" id="" placeholder="Your name" />
+          </div>
+          <div class="modal__item">
+            <input class="modal__input" type="tel" name="" id="" placeholder="Phone number" />
+          </div>
+          <div class="modal__item">
+            <input class="modal__input" type="email" name="" id="" placeholder="E-mail" />
+          </div>
+        </div>
+
+        <button type="submit" class="button main-display__button">Send</button>
+      </div>
+    </form>
   </body>
 </html>
