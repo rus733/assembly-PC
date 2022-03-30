@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=  , initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width  , initial-scale=1.0" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" /> -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="fonts/stylesheet.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
-
+    <!-- <script src="js/main.js" defer></script> -->
+    <script src="js/modules/timer.js" defer></script>
+    <script src="js/modules/smoothScroll.js" defer></script>
+    <script src="js/modules/modal.js" defer></script>
+    <script src="js/modules/sendForms.js" defer></script>
     <title>Assembly-pc</title>
   </head>
   <body>
@@ -23,9 +26,9 @@
       </a>
       <!-- <div class="header__menu"> -->
       <nav class="header__nav">
-        <a href="#">ABOUT US</a>
-        <a href="#">WORK PROCESS</a>
-        <a href="#">OUR TEAM</a>
+        <a href="#collect">ABOUT US</a>
+        <a href="#working">WORK PROCESS</a>
+        <a href="#team">OUR TEAM</a>
       </nav>
       <button type="button" class="button header__button modal__button">Contact with us</button>
       <!-- </div> -->
@@ -65,7 +68,7 @@
     <!-- /*===================== work ================*/ -->
     <section class="work">
       <div class="container">
-        <div class="work__wrap">
+        <div class="work__wrap" id="collect">
           <div class="work__img">
             <img src="img/work__img.png" alt="" />
           </div>
@@ -82,7 +85,7 @@
     <!-- /*===================== process ================*/ -->
     <section class="process">
       <div class="container">
-        <div class="process__wrap">
+        <div class="process__wrap" id="working">
           <div class="process__title">
             <div class="process__img">
               <img src="img/command-img.svg" alt="" />
@@ -122,30 +125,32 @@
     <!-- /*===================== command ================*/ -->
     <section class="command">
       <div class="container">
-        <div class="process__title command__title">
-          <div class="process__img">
-            <img src="img/command-img.svg" alt="" />
+        <div class="command__wrap" id="team">
+          <div class="process__title command__title">
+            <div class="process__img">
+              <img src="img/command-img.svg" alt="" />
+            </div>
+            <h2 class="process__header command__header">Our Team</h2>
           </div>
-          <h2 class="process__header command__header">Our Team</h2>
-        </div>
-        <div class="command__wrap">
-          <div class="command__item">
-            <div class="command__img"><img src="img/comm-1.png" alt="" /></div>
-            <h3 class="command__name">Eugene</h3>
-            <div class="command__professional">Memory Card Specialist</div>
-            <a href="#" class="button command__link">Info</a>
-          </div>
-          <div class="command__item">
-            <div class="command__img"><img src="img/comm-2.png" alt="" /></div>
-            <h3 class="command__name">Alex</h3>
-            <div class="command__professional">Processor Specialist</div>
-            <a href="#" class="button command__link">Info</a>
-          </div>
-          <div class="command__item">
-            <div class="command__img"><img src="img/comm-3.png" alt="" /></div>
-            <h3 class="command__name">Dmitro</h3>
-            <div class="command__professional">Video Card Specialist</div>
-            <a href="#" class="button command__link">Info</a>
+          <div class="command__block">
+            <div class="command__item">
+              <div class="command__img"><img src="img/comm-1.png" alt="" /></div>
+              <h3 class="command__name">Eugene</h3>
+              <div class="command__professional">Memory Card Specialist</div>
+              <a href="#" class="button command__link">Info</a>
+            </div>
+            <div class="command__item">
+              <div class="command__img"><img src="img/comm-2.png" alt="" /></div>
+              <h3 class="command__name">Alex</h3>
+              <div class="command__professional">Processor Specialist</div>
+              <a href="#" class="button command__link">Info</a>
+            </div>
+            <div class="command__item">
+              <div class="command__img"><img src="img/comm-3.png" alt="" /></div>
+              <h3 class="command__name">Dmitro</h3>
+              <div class="command__professional">Video Card Specialist</div>
+              <a href="#" class="button command__link">Info</a>
+            </div>
           </div>
         </div>
         <!-- /command__wrap -->
@@ -179,27 +184,31 @@
     </section>
     <!-- /assembly -->
     <!-- /*===================== modal ================*/ -->
-    <form action="#" class="modal block__center">
+    <div class="modal block__center">
       <div class="modal__inner">
-        <div class="modal__close">
-          <img src="img/cross.svg" alt="" />
-        </div>
-        <h3 class="modal__header">PC Assembly Order</h3>
-        <div class="modal__subheader">We will contact you to discuss order details</div>
-        <div class="modal__elements block__center">
-          <div class="modal__item">
-            <input class="modal__input" type="text" name="" id="" placeholder="Your name" />
+        <form action="#" class="modal__container">
+          <div class="modal__close">
+            <img src="img/cross.svg" alt="" />
           </div>
-          <div class="modal__item">
-            <input class="modal__input" type="tel" name="" id="" placeholder="Phone number" />
+          <h3 class="modal__header">PC Assembly Order</h3>
+          <div class="modal__subheader">We will contact you to discuss order details</div>
+          <div class="modal__elements block__center">
+            <div class="modal__item">
+              <input class="modal__input" type="text" name="name" id="" placeholder="Your name" />
+            </div>
+            <div class="modal__item">
+              <input class="modal__input" type="tel" name="phone" id="" placeholder="Phone number" />
+            </div>
+            <div class="modal__item">
+              <input class="modal__input" type="email" name="email" id="" placeholder="E-mail" />
+            </div>
           </div>
-          <div class="modal__item">
-            <input class="modal__input" type="email" name="" id="" placeholder="E-mail" />
-          </div>
-        </div>
 
-        <button type="submit" class="button main-display__button">Send</button>
+          <!-- <button type="submit" class="button main-display__button">Send</button> -->
+          <input type="submit" class="button button-pink main-display__button" value="Отправить" />
+        </form>
       </div>
-    </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
   </body>
 </html>

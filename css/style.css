@@ -326,10 +326,14 @@ h6 {
   margin-bottom: 0;
 }
 .command__wrap {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   padding-left: 11rem;
   padding-right: 11rem;
+}
+.command__block {
+  display: flex;
+  justify-content: space-between;
 }
 
 .command__item {
@@ -368,11 +372,12 @@ h6 {
   line-height: 150%;
   opacity: 0.8;
   border: 0.1rem solid #ffffff;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .command__link:hover {
-  border-color: #285ad1;
+  /* border-color: #285ad1; */
+  background: linear-gradient(94.78deg, #df5950 11.19%, #451046 93.72%);
 }
 /*========================= assembly =====================*/
 .assembly {
@@ -454,7 +459,7 @@ h6 {
   overflow-y: auto;
   z-index: 10;
   padding: 3rem 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5); /* темный фон оверлей  */
   display: none;
 }
 .modal__inner {
@@ -515,7 +520,7 @@ h6 {
   overflow: hidden;
   height: 100%;
 }
-
+/* установим принудительно цвет плейсхолдера */
 ::placeholder {
   color: #fff;
   /* font-size: 0.5rem; */
