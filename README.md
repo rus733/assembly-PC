@@ -4,3 +4,5 @@
 - css
 - animation
 - JavaScript
+- View : https://rus733.github.io/assembly-PC/
+
